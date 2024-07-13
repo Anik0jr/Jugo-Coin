@@ -5,9 +5,9 @@ import { bear, coin, highVoltage, notcoin, rocket, trophy } from './images';
 
 const App = () => {
   const [points, setPoints] = useState(0);
-  const [energy, setEnergy] = useState(2532);
+  const [energy, setEnergy] = useState(5);
   const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);
-  const pointsToAdd = 12;
+  const pointsToAdd = 5;
   const energyToReduce = 12;
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
