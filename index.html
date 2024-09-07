@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+     <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,5 +10,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <button id="showAd">Earn</button>
+    <script>
+        const AdController = window.Adsgram.init({ blockId: "your-block-id" });
+        document.getElementById('showAd').onclick = () => {
+            AdController.show().then((result) => {
+                alert("Ad watched! Give user reward.");
+            }).catch((result) => {
+                alert("Ad skipped or error occurred.");
+            });
+        };
+    </script>
   </body>
 </html>
+
+
