@@ -12,7 +12,7 @@
     <script type="module" src="/src/main.tsx"></script>
     <button id="showAd">Earn</button>
     <script>
-        const AdController = window.Adsgram.init({ blockId: "your-block-id" });
+        const AdController = window.Adsgram.init({ blockId: "2245" });
         document.getElementById('showAd').onclick = () => {
             AdController.show().then((result) => {
                 alert("Ad watched! Give user reward.");
